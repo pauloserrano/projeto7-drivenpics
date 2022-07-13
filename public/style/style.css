@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -31,13 +33,16 @@ header > .header-wrapper{
 
 header .logo-container{
     display: flex;
+    align-items: center;
 }
 
 header .logo-container *{
     cursor: pointer;
 }
 
-header .logo-container img{
+header .logo-container h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
     border-left: 1px solid #DBDBDB;
     margin-left: 16px;
     padding-left: 16px;
@@ -84,12 +89,12 @@ header input::placeholder{
     margin: 0 auto;
 }
 
-.main > *, 
+main > *, 
 .posts > div{
     margin-bottom: 24px;
 }
 
-.main .stories-container{
+main .stories-container{
     display: flex;
     align-items: center;
     width: 615px;
@@ -101,7 +106,7 @@ header input::placeholder{
     background-color: #fff;
 }
 
-.main .stories-container > div{
+main .stories-container > div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,23 +116,23 @@ header input::placeholder{
     cursor: pointer;
 }
 
-.main .stories-container > div:hover{
+main .stories-container > div:hover{
     transform: scale(1.1);
     transition: all linear .4s;
 }
 
 
-.main .stories-container > div:hover .gradient-border{
+main .stories-container > div:hover .gradient-border{
     transform: rotate(360deg);
     transition: all ease 1s;
 }
 
-.main .stories-container > div:hover img{
+main .stories-container > div:hover img{
     transform: rotate(-360deg);
     transition: all ease 1s;
 }
 
-.main .stories-container .gradient-border{
+main .stories-container .gradient-border{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,14 +142,14 @@ header input::placeholder{
     background: linear-gradient(to top right, #FFBC86, #AA0072);
 }
 
-.main .stories-container img{
+main .stories-container img{
     width: 56px;
     height: 56px;
     border-radius: 50%;
     border: 2px solid white;
 }
 
-.main .stories-container p{
+main .stories-container p{
     height: 1.2em;
     max-width: 56px;
     margin-top: 6px;
@@ -156,7 +161,7 @@ header input::placeholder{
 }
 
 
-.main .stories-container ion-icon{
+main .stories-container ion-icon{
     position: absolute;
     top: 50%; right: 6px;
     transform: translateY(-50%);
@@ -165,11 +170,11 @@ header input::placeholder{
     font-size: 32px;
 }
 
-.main .stories-container ion-icon:hover{
+main .stories-container ion-icon:hover{
     cursor: pointer;
 }
 
-.main .user-container{
+main .user-container{
     display: flex;
     align-items: center;
     height: 120px;
@@ -178,15 +183,15 @@ header input::placeholder{
     background-color: #fff;
 }
 
-.main .posts{
+main .posts{
     width: 615px;
 }
 
-.main .posts > div{
+main .posts > div{
     border: 1px solid #dbdbdb;
 }
 
-.main .posts .header{
+main .posts .header{
     display: flex;
     align-items: center;
     position: relative;
@@ -194,7 +199,7 @@ header input::placeholder{
     background-color: white;
 }
 
-.main .posts .header img{
+main .posts .header img{
     width: 32px;
     height: 32px;
     margin-right: 16px;
@@ -202,47 +207,47 @@ header input::placeholder{
     cursor: pointer;
 }
 
-.main .posts .header p{
+main .posts .header p{
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
 }
 
-.main .posts ion-icon{
+main .posts ion-icon{
     cursor: pointer;
 }
 
-.main .posts .header ion-icon, 
-.main .posts .footer-icons ion-icon:last-child{
+main .posts .header ion-icon, 
+main .posts .footer-icons ion-icon:last-child{
     margin-left: auto;
 }
 
-.main .posts .post-img{
+main .posts .post-img{
     width: 100%;
 }
 
-.main .posts .footer{
+main .posts .footer{
     position: relative;
     padding: 10px 16px 16px;
 }
 
-.main .posts .footer-icons{
+main .posts .footer-icons{
     display: flex;
     font-size: 22px;
     margin-bottom: 10px;
 }
 
-.main .posts .footer-icons ion-icon:not(:last-child){
+main .posts .footer-icons ion-icon:not(:last-child){
     margin-right: 10px;
 }
 
-.main .posts .footer-data{
+main .posts .footer-data{
     display: flex;
     align-items: center;
     font-size: 14px;
 }
 
-.main .posts .footer-data img{
+main .posts .footer-data img{
     width: 20px;
     height: 20px;
     border-radius: 100%;
@@ -255,7 +260,7 @@ header input::placeholder{
     cursor: pointer;
 }
 
-.side-bar{
+aside{
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -265,20 +270,20 @@ header input::placeholder{
     padding: 24px;
 }
 
-.side-bar .user-profile{
+aside .user-profile{
     display: flex;
     height: 56px;
     margin-bottom: 24px;
 }
 
-.side-bar .user-profile img{
+aside .user-profile img{
     width: 56px; 
     border-radius: 100%;
     margin-right: 16px;
     cursor: pointer;
 }
 
-.side-bar .user-info{
+aside .user-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,48 +291,48 @@ header input::placeholder{
     cursor: pointer;
 }
 
-.side-bar .user-info h3{
+aside .user-info h3{
     color: #262626;
     font-weight: 500;
 }
 
-.side-bar .user-info p{
+aside .user-info p{
     color: #8e8e8e;
     font-weight: 300;
 }
 
-.side-bar .user-suggestions-titles{
+aside .user-suggestions-titles{
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
     pointer-events: none;
 }
 
-.main .posts .comments,
-.main .posts .new-comment {
+main .posts .comments,
+main .posts .new-comment {
     margin-top: 16px;
 }
 
-.main .posts .comments .user-comments-title,
-.side-bar .user-suggestions-titles div{
+main .posts .comments .user-comments-title,
+aside .user-suggestions-titles div{
     font-size: 12px;
     font-weight: 500;
 }
 
-.main .posts .comments .user-comments-title div:nth-child(1),
-.side-bar .user-suggestions-titles div:nth-child(1){
+main .posts .comments .user-comments-title div:nth-child(1),
+aside .user-suggestions-titles div:nth-child(1){
     color: #8e8e8e;
 }
 
-.main .posts .comments > div,
-.side-bar .user-suggestions > div{
+main .posts .comments > div,
+aside .user-suggestions > div{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
 
-.main .posts .comments img,
-.side-bar .user-suggestions img{
+main .posts .comments img,
+aside .user-suggestions img{
     width: 32px;
     height: 32px;
     border-radius: 100%;
@@ -335,8 +340,8 @@ header input::placeholder{
     cursor: pointer;
 }
 
-.main .posts .comments .user-comment,
-.side-bar .user-suggestions .user-info{
+main .posts .comments .user-comment,
+aside .user-suggestions .user-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -344,12 +349,12 @@ header input::placeholder{
     line-height: 1.2em;
 }
 
-.main .posts .comments .user-comment p:nth-child(2){
+main .posts .comments .user-comment p:nth-child(2){
     color: #8e8e8e;
 }
 
-.main .posts .comments button,
-.side-bar .user-suggestions button{
+main .posts .comments button,
+aside .user-suggestions button{
     font-size: 12px;
     color: #139EF2;
     margin-left: auto;
@@ -358,58 +363,58 @@ header input::placeholder{
     cursor: pointer;
 }
 
-.main .posts .comments button ion-icon{
+main .posts .comments button ion-icon{
     font-size: 16px;
 }
 
-.main .posts .comments button ion-icon:hover{
+main .posts .comments button ion-icon:hover{
     color: red;
     transition: linear color .2s ;
 }
 
-.main .posts .comments .see-all div{
+main .posts .comments .see-all div{
     cursor: pointer;
 }
 
-.main .posts .new-comment input{
+main .posts .new-comment input{
     width: 80%;
     border-radius: 6px;
     border: 1px solid #dbdbdb;
     padding: .75em .5rem;
 }
 
-.main .posts .new-comment button{
+main .posts .new-comment button{
     color: #B2DFFC;
 }
 
-.main .posts .new-comment button:hover{
+main .posts .new-comment button:hover{
     color: #0095F6;
     transition: linear color .3s;
 }
 
-.side-bar .copyrights{
+aside .copyrights{
     display: flex;
     flex-direction: column;
     font-size: 11px;
     color: #c7c7c7;
 }
 
-.side-bar .copyrights span{
+aside .copyrights span{
     margin-top: 16px;
 }
 
-.nav-mobile, .mobile{
+nav.mobile, .mobile{
     display: none;
 }
 
 header .nav-icons ion-icon:hover,
-.main .posts .footer-icons ion-icon:hover,
+main .posts .footer-icons ion-icon:hover,
 .footer-data strong:hover,
-.side-bar .user-suggestions button:hover,
-.side-bar img:hover,
-.side-bar h3:hover, 
-.side-bar p:hover,
-.nav-mobile ion-icon:hover{
+aside .user-suggestions button:hover,
+aside img:hover,
+aside h3:hover, 
+aside p:hover,
+nav.mobile ion-icon:hover{
     filter: opacity(.7);
     transition: linear all .2s;
 }
@@ -424,14 +429,14 @@ header .nav-icons ion-icon:hover,
         justify-content: center;
     }
 
-    .side-bar{
+    aside{
         display: none;
     }
 }
 
 
 @media (max-width: 613px){
-    .logo-container img,
+    .logo-container h1,
     .stories-container .right-arrow-container,
     .nav-icons ion-icon:not(:first-child){
         display: none;
@@ -449,7 +454,7 @@ header .nav-icons ion-icon:hover,
         display: none;
     }
 
-    header .logo-container img{
+    header .logo-container h1{
         display: initial;
         border: none;
         padding: 0;
@@ -459,7 +464,7 @@ header .nav-icons ion-icon:hover,
         transform: translateX(-50%);
     }
 
-    .main{
+    main{
         margin-bottom: 30px;
     }
 
@@ -467,7 +472,7 @@ header .nav-icons ion-icon:hover,
         grid-column: 3;
     }
 
-    .main .stories-container{
+    main .stories-container{
         width: 100%;
         border-radius: 0;
         border: none;
@@ -476,20 +481,20 @@ header .nav-icons ion-icon:hover,
         overflow-x: hidden;
     }
 
-    .main, .main .posts{
+    main, main .posts{
         max-width: 100%;
     }
 
-    .main .stories-container ion-icon{
+    main .stories-container ion-icon{
         display: none;
     }
 
-    .main .posts > div{
+    main .posts > div{
         border-left: none;
         border-right: none;
     }
 
-    .nav-mobile{
+    nav.mobile{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -504,7 +509,7 @@ header .nav-icons ion-icon:hover,
         z-index: 1;
     }
 
-    .nav-mobile ion-icon{
+    nav.mobile ion-icon{
         font-size: 22px;
         cursor: pointer;
     }

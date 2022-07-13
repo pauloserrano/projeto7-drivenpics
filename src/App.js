@@ -1,10 +1,22 @@
-import Header from './components/Header'
+import Header from './components/Header';
+import MobileNav from './components/MobileNav';
+import Posts from './components/Posts';
+import SideBar from './components/SideBar';
+import Stories from './components/Stories';
 
 const App = () => {
   return (
-    <header className="App">
-      <Header />      
-    </header>
+    <>
+      <Header /> 
+      <div className='content'>
+        <main>
+          <Stories />
+          <Posts /> 
+        </main>
+          <SideBar />
+      </div>
+      <MobileNav />
+    </>
   );
 }
 
