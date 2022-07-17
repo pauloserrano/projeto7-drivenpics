@@ -12,7 +12,7 @@ const Suggestion = ({ user: {username, profile_image} }) => {
         <img src={profile_image} alt={username} />
         <div className="user-info">
             <h3>{username}</h3>
-            <p>Segue você</p>
+            <p>{Math.random() > 0.2 ? 'Segue você' : 'Novo no Instagram'}</p>
         </div>
         {isFollowing 
           ? <button onClick={handleClick} className="follow" style={{color: '#111'}}>Seguindo</button>
