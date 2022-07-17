@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 *{
     box-sizing: border-box;
@@ -188,7 +188,7 @@ main .posts{
     width: 615px;
 }
 
-main .posts > div{
+main .posts > div:not(.loader){
     border: 1px solid #dbdbdb;
 }
 
@@ -229,15 +229,27 @@ main .posts .post-img{
     object-fit: cover;
 }
 
+
 main .posts .footer{
     position: relative;
     padding: 16px 16px;
+}
+
+main .posts .footer > p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 1em;
 }
 
 main .posts .footer-icons{
     display: flex;
     font-size: 22px;
     margin-bottom: 16px;
+}
+
+main .posts .footer-icons ion-icon[name="heart"]{
+    color: red;
 }
 
 main .posts .footer-icons ion-icon:not(:last-child){

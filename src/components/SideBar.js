@@ -1,6 +1,14 @@
-import React from 'react'
+import Suggestion from "./Suggestion"
 
 const SideBar = () => {
+    const users = [
+        {username: 'badvibesmemes', profile_image: '/images/profiles/badvibesmemes.jpg'},
+        {username: 'chibirdart', profile_image: '/images/profiles/chibirdart.jpg'},
+        {username: 'razoesparaacreditar', profile_image: '/images/profiles/razoesparaacreditar.jpg'},
+        {username: 'adorableanimals', profile_image: '/images/profiles/adorableanimals.jpg'},
+        {username: 'smallcutecats', profile_image: '/images/profiles/smallcutecats.jpg'}
+    ]
+
   return (
     <aside>
         <div className="user-profile">
@@ -15,46 +23,10 @@ const SideBar = () => {
             <div>Ver tudo</div>
         </div>
         <div className="user-suggestions">
-            <div>
-                <img src="/images/profiles/badvibesmemes.jpg" alt="badvibesmemes" />
-                <div className="user-info">
-                    <h3>bad.vibes.memes</h3>
-                    <p>Segue você</p>
-                </div>
-                <button className="follow">Seguir</button>
-            </div>
-            <div>
-                <img src="/images/profiles/chibirdart.jpg" alt="chibirdart" />
-                <div className="user-info">
-                    <h3>chibirdart</h3>
-                    <p>Segue você</p>
-                </div>
-                <button className="follow">Seguir</button>
-            </div>
-            <div>
-                <img src="/images/profiles/razoesparaacreditar.jpg" alt="razoesparaacreditar" />
-                <div className="user-info">
-                    <h3>razoesparaacreditar</h3>
-                    <p>Novo no Instagram</p>
-                </div>
-                <button className="follow">Seguir</button>
-            </div>
-            <div>
-                <img src="/images/profiles/adorableanimals.jpg" alt="adorableanimals" />
-                <div className="user-info">
-                    <h3>adorableanimals</h3>
-                    <p>Segue você</p>
-                </div>
-                <button className="follow">Seguir</button>
-            </div>
-            <div>
-                <img src="/images/profiles/smallcutecats.jpg" alt="smallcutecats" />
-                <div className="user-info">
-                    <h3>smallcutecats</h3>
-                    <p>Segue você</p>
-                </div>
-                <button className="follow">Seguir</button>
-            </div>
+            {users.length > 0
+                ? users.map((user, id) => (<Suggestion key={id} user={user}/>))
+                : ''
+            }
         </div>
         <div className="copyrights">
             <span>Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade •
