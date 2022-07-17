@@ -382,6 +382,7 @@ main .posts .comments button ion-icon{
     font-size: 16px;
 }
 
+main .posts .comments button ion-icon[name="heart"],
 main .posts .comments button ion-icon:hover{
     color: red;
     transition: linear color .2s ;
@@ -399,11 +400,11 @@ main .posts .new-comment input{
 }
 
 main .posts .new-comment button{
-    color: #B2DFFC;
+    color: #139EF2;
 }
 
 main .posts .new-comment button:hover{
-    color: #0095F6;
+    color: #004e81;
     transition: linear color .3s;
 }
 

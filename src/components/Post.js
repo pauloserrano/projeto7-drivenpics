@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Comments from "./Comments"
 
 const Post = ({ photo }) => {
     const { description, user, urls } = photo
@@ -50,39 +51,7 @@ const Post = ({ photo }) => {
                 <img src={user.profile_image.large} alt={user.username} />
                 <p>Curtido por <strong>{user.username}</strong> e <strong>outras {formatLike(likes)} pessoas</strong></p>
             </div>
-            <div className="comments">
-                <div className="user-comments-title">
-                    <div>Comentários</div>
-                </div>
-                <div>
-                    <img src="/images/profiles/badvibesmemes.jpg" alt="badvibesmemes" />
-                    <div className="user-comment">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem pariatur quaerat neque placeat quis excepturi ipsa atque hic doloremque non?</p>
-                        <p>7 likes</p>
-                    </div>
-                    <button>
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                </div>
-                <div>
-                    <img src="/images/profiles/nathanwpylestrangeplanet.jpg" alt="nathanwpylestrangeplanet" />
-                    <div className="user-comment">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem pariatur ipsa atque hic doloremque non?</p>
-                        <p>3 likes</p>
-                    </div>
-                    <button>
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                </div>
-                <div className="user-comments-title see-all">
-                    <div>Ver todos</div>
-                </div>
-                <div className="new-comment">
-                    <img src="/images/profiles/catanacomics.jpg" alt="catanacomics" />
-                    <input type="text" placeholder="Add a comment..." />
-                    <button>Publish</button>
-                </div>
-            </div>
+            <Comments />
         </div>
     </div>
   )
